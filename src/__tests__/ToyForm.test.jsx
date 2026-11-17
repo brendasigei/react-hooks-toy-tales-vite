@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import App from '../components/App';
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
 describe("ToyForm Submission", () => {
   it("submits a new toy and displays it", async () => {

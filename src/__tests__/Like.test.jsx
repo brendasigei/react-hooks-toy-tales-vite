@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import App from '../components/App';
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
 describe("Liking a Toy", () => {
     it("increments likes when the like button is clicked", async () => {

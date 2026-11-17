@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from '../components/App';
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
 describe('1st Deliverable', () => {
   test('Displays all toys on startup', async () => {

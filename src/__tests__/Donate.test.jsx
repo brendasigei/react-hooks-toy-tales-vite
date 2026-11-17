@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import App from '../components/App';
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
 describe("Deleting a Toy", () => {
     it("removes the toy when donate button is clicked", async () => {
