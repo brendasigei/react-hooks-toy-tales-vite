@@ -1,17 +1,26 @@
-import React from "react";
+function ToyCard({ toy, onLike, onDonate }) {
+  const { id, name, image, likes } = toy;
 
-function ToyCard() {
   return (
-    <div className="card" data-testid="toy-card">
-      <h2>{"" /* Toy's Name */}</h2>
+    <div className="flex flex-col items-center gap-2 rounded-lg bg-white p-4 shadow">
+      <h2 className="text-lg font-bold">{name}</h2>
       <img
-        src={"" /* Toy's Image */}
-        alt={"" /* Toy's Name */}
-        className="toy-avatar"
+        src={image}
+        alt={name}
+        className="h-40 w-40 rounded object-cover"
       />
-      <p>{"" /* Toy's Likes */} Likes </p>
-      <button className="like-btn">Like {"<3"}</button>
-      <button className="del-btn">Donate to GoodWill</button>
+      <p className="text-gray-600">{likes} Likes</p>
+      <button
+        onClick={() => onLike(toy)}
+        className="rounded bg-pink-500 px-4 py-1 text-white hover:bg-pink-600"
+      >
+        Like      </button>
+      <button
+        onClick={() => onDonate(id)}
+        className="rounded bg-gray-700 px-4 py-1 text-white hover:bg-gray-800"
+      >
+        Donate to GoodWill
+      </button>
     </div>
   );
 }
